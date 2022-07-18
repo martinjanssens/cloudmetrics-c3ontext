@@ -21,9 +21,15 @@ metrics = ['cloud_fraction',
            'spectral_slope',
            'woi1',
            'woi2',
-           'woi3'
+           'woi3',
+           'mean',
+           'var'
           ]
 ```
 - A comparison to the level-3, 'instant'-sampled, manually classified IR images in `C3ONTEXT` (`level3_IR_instant`), in an attempt to reproduce fig. 6 from [Schulz (2022)](https://doi.org/10.5194/essd-14-1233-2022) (`compare-C3ONTEXT.ipynb`).
 
-> **NOTE**: The level-3 c3ontext data should be accessible through the `eurec4a` catalag, but I am currently unable to make that work, and so have downloaded the data myself from https://zenodo.org/record/5979718#.Yrxu2hNBztM
+Currently I am attempting to add a few analyses of personal interest, e.g.:
+- Do pattern classes cover larger areas of scenes as you move towards the fringes of the distribution? I.e. how extreme are they, and how representative are combinations of pattern classes of any point in the metric space (see `compare-C3ONTEXT.ipynb`)?
+- Do we see typical trajetories through metric space?
+
+> **NOTE**: The level-3 c3ontext data should be accessible through the `eurec4a` catalag, but I am currently unable to make that work  (see https://github.com/eurec4a/eurec4a-intake/issues/106), and so have downloaded the data myself from https://zenodo.org/record/5979718#.Yrxu2hNBztM

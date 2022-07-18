@@ -227,7 +227,7 @@ def getGrids(X_2d, met_2d, metrics, metLab, nPts=20, thr=0):
 
 
 def plotEmbedding(X, imgarr, filterOutliers=False, title=None, zoom=0.075, 
-                  distMin=1e-3, pltArrow=False, ax=None, offs=0):
+                  distMin=1e-3, pltArrow=False, ax=None, offs=0, vmin=None, vmax=None):
     # Plot embedding space
     
     if filterOutliers:
@@ -249,7 +249,7 @@ def plotEmbedding(X, imgarr, filterOutliers=False, title=None, zoom=0.075,
             continue # don't show points that are too close
         shown_images = np.r_[shown_images, [X[i]]]
         imagebox = offsetbox.AnnotationBbox(
-            offsetbox.OffsetImage(imgarr[i,:,:], cmap=plt.cm.gray,zoom=zoom),
+            offsetbox.OffsetImage(imgarr[i,:,:], cmap=plt.cm.RdBu_r,zoom=zoom, vmin=vmin,vmax=vmax),
             X[i],pad=0.3)
         ax.add_artist(imagebox)
         plti.append(i)
